@@ -139,7 +139,7 @@ npm test
 ---
 
 ## 🎥 Demo Video
-[📺 Click here to watch the demo](<video-link>)
+[📺 Click here to watch the demo](https://drive.google.com/file/d/1O0THT2ujNyPHc2faMdxvv5qnGUm23QMG/view?usp=drive_link)
 
 ---
 
