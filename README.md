@@ -23,6 +23,29 @@ Ensure you have the following installed:
 - [Node.js](https://nodejs.org/)
 - [FFmpeg](https://ffmpeg.org/download.html)
 
+
+# FFmpeg Installation Guide
+
+FFmpeg is a powerful multimedia framework that allows you to record, convert, and stream audio and video files.
+
+## 📥 Installation
+
+### 🔹 Windows
+1. **Download FFmpeg**  
+   - Visit [FFmpeg Official Site](https://ffmpeg.org/download.html).  
+   - Under "Get packages & executable files," select **Windows builds** (e.g., [BTBn](https://github.com/BtbN/FFmpeg-Builds/releases)).  
+   - Download the latest **full build** (`ffmpeg-master-latest-win64-gpl-shared.zip
+` file).  
+
+2. **Extract and Set Up**  
+   - Extract the `.zip` file to `C:\ffmpeg`.  
+   - Inside `C:\ffmpeg`, find the `bin` folder (e.g., `C:\ffmpeg\bin`).  
+
+3. **Add to System Path**  
+   - Open **System Properties** → **Environment Variables**.  
+   - Under **System Variables**, find `Path` → **Edit** → **New** → Add `C:\ffmpeg\bin`.  
+   - Click **OK** to save changes. 
+---
 ### **🛠 Setup Instructions**
 ```bash
 # Clone the repository
