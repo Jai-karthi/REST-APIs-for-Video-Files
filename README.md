@@ -33,7 +33,7 @@ cd REST-APIs-for-Video-Files
 npm install
 
 # Start the server
-npm src/server.js
+node src/server.js
 ```
 
 ---
