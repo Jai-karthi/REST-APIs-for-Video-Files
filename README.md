@@ -40,9 +40,9 @@ npm src/server.js
 
 ## 📜 API Documentation
 
-### **Base URL:**
+### **Swagger URL:**
 ```
-http://localhost:7000
+http://localhost:7000//api-docs
 ```
 
 ### **1️⃣ Upload Video**
@@ -130,16 +130,6 @@ POST /share
   }
   ```
 
----
-
-### **5️⃣ Access Shared Video**
-```http
-GET /access/:token
-```
-- **Description:** Retrieves a shared video by its token.
-
----
-
 ## 🧪 Running Tests
 To run the test suite:
 ```bash
@@ -175,4 +165,4 @@ This project is licensed under the MIT License.
 
 ## 👨‍💻 Author
 - **Jai Prashanth**  
-  [GitHub](https://github.com/Jai-karthi) | [LinkedIn](https://linkedin.com/in/j-p1)
+  [GitHub](https://github.com/Jai-karthi) 
