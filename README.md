@@ -26,8 +26,8 @@ Ensure you have the following installed:
 ### **🛠 Setup Instructions**
 ```bash
 # Clone the repository
-git clone <repo-url>
-cd <project-folder>
+git clone https://github.com/Jai-karthi/REST-APIs-for-Video-Files.git
+cd REST-APIs-for-Video-Files
 
 # Install dependencies
 npm install
