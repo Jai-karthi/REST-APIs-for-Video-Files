@@ -165,7 +165,6 @@ npm test
 [📺 Click here to watch the demo](https://drive.google.com/file/d/1O0THT2ujNyPHc2faMdxvv5qnGUm23QMG/view?usp=drive_link)
 
 ---
-
 ## 📝 Assumptions & Choices
 - Used **SQLite** for simplicity.
 - Used **Multer** for file uploads.
