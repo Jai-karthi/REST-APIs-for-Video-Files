@@ -29,11 +29,10 @@ const options = {
     apis: ["./src/server.js", "./src/routes/*.js"], // Ensure the correct paths are included
 };
 
-const swaggerSpec = swaggerJsDoc(options);
+const specs = swaggerJsDoc(options);
 
-function swaggerDocs(app) {
-    app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+module.exports = (app) => {
+    app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs));
     console.log(`Swagger docs available at http://localhost:${process.env.PORT || 7000}/api-docs`);
 }
 
-module.exports = swaggerDocs;

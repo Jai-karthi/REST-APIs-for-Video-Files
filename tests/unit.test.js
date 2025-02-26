@@ -1,9 +1,9 @@
-const { initializeDB } = require("../src/db"); 
+const { initializeDB } = require("../src/config"); 
 const request = require("supertest");
 const app = require("../src/server");
 const path = require("path");
 
-jest.mock("../src/db.js", () => ({
+jest.mock("../src/config/db.js", () => ({
     initializeDB: jest.fn().mockResolvedValue(true),
 }));
 
