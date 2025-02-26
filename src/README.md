@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-=======
 # Video Processing API
 
 ## 📌 Overview
