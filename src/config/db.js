@@ -13,7 +13,7 @@ const dbPromise = openDB();
 async function initializeDB() {
     const db = await dbPromise;
 
-    // Ensure the shares table is recreated properly
+    
     await db.exec(`
         CREATE TABLE IF NOT EXISTS videos (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -32,11 +32,11 @@ async function initializeDB() {
     console.log("Database initialized.");
 }
 
-// Ensure database schema updates
+
 async function updateDatabaseSchema() {
     const db = await dbPromise;
 
-    // Check if the expiration_time column exists
+    
     const columns = await db.all(`PRAGMA table_info(shares)`);
     const hasExpirationTime = columns.some(col => col.name === 'expiration_time');
 
