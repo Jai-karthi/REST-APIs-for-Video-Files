@@ -21,18 +21,18 @@ const storage = multer.diskStorage({
 ffmpeg.setFfmpegPath('C:\\Program Files\\ffmpeg\\bin\\ffmpeg.exe');
 
 const upload = multer({
-    limits: { fileSize: 100 * 1024 * 1024 }, // 100MB limit
+    limits: { fileSize: 100 * 1024 * 1024 }, 
     storage: storage
   });
   
-
+//upload
 router.post('/upload', authMiddleware, upload.single('video'), async (req, res) => {
     if (!req.file) {
         console.log("Upload failed: No file received");
         return res.status(400).json({ message: 'No file uploaded' });
     }
 
-    console.log("Uploaded file details:", req.file); // Debugging log
+    console.log("Uploaded file details:", req.file); 
 
     const db = await dbPromise;
     try {
@@ -44,11 +44,11 @@ router.post('/upload', authMiddleware, upload.single('video'), async (req, res) 
     }
 });
 
-
+//trim
 router.post('/trim', async (req, res) => {
     const { filename, start, duration } = req.body;
 
-    console.log("Received trim request:", req.body);  // Debugging log
+    console.log("Received trim request:", req.body);  
 
     if (!filename || start === undefined || duration === undefined) {
         console.log("Missing required fields");
@@ -56,7 +56,7 @@ router.post('/trim', async (req, res) => {
     }
 
     const inputPath = path.join(UPLOAD_DIR, filename);
-    console.log("Input file path:", inputPath);  // Debugging log
+    console.log("Input file path:", inputPath); 
 
     try {
         await fs.promises.access(inputPath);
@@ -85,7 +85,7 @@ router.post('/trim', async (req, res) => {
         .run();
 });
 
-
+//merge
 router.post('/merge',  authMiddleware,async (req, res) => {
     const { filenames } = req.body;
     if (!filenames || !Array.isArray(filenames) || filenames.length < 2) {
