@@ -7,6 +7,7 @@ const fs = require("fs");
 const router = express.Router();
 const UPLOAD_DIR = path.join(process.cwd(), 'uploads');
 
+//video share
 router.post('/share', async (req, res) => {
     const { filename } = req.body;
     if (!filename) {
@@ -25,7 +26,7 @@ router.post('/share', async (req, res) => {
     });
 });
 
-
+//video access
 router.get("/access/:id", async (req, res) => {
     const shareId = req.params.id;
     const db = await dbPromise;
