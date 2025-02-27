@@ -7,28 +7,6 @@ const fs = require("fs");
 const router = express.Router();
 const UPLOAD_DIR = path.join(process.cwd(), 'uploads');
 
-/**
- * @swagger
- * /share:
- *   post:
- *     summary: Generate a shareable link for a video
- *     description: Create a tokenized link to share a video.
- *     requestBody:
- *       required: true
- *       content:
- *         application/json:
- *           schema:
- *             type: object
- *             properties:
- *               filename:
- *                 type: string
- *                 description: Name of the video file to share.
- *     responses:
- *       200:
- *         description: Share link created
- *       400:
- *         description: Filename is required
- */
 router.post('/share', async (req, res) => {
     const { filename } = req.body;
     if (!filename) {
@@ -47,25 +25,7 @@ router.post('/share', async (req, res) => {
     });
 });
 
-/**
- * @swagger
- * /access/{id}:
- *   get:
- *     summary: Access a shared video
- *     description: Retrieve a shared video link if it is still valid.
- *     parameters:
- *       - in: path
- *         name: id
- *         required: true
- *         description: Unique token for the shared video.
- *     responses:
- *       200:
- *         description: Successfully retrieved the shared video link
- *       403:
- *         description: Link expired
- *       404:
- *         description: Link not found
- */
+
 router.get("/access/:id", async (req, res) => {
     const shareId = req.params.id;
     const db = await dbPromise;
