@@ -26,7 +26,7 @@ const options = {
         },
         security: [{ BearerAuth: [] }], // Apply security globally
     },
-    apis: [" ./src/routes/*.js","./src/docs/swaggerDocs.js"], // Ensure the correct paths are included
+    apis: [" ./src/routes/*.js","./src/docs/swaggerDocs.js"], 
 };
 
 const specs = swaggerJsDoc(options);
